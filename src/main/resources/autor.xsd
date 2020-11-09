@@ -1,0 +1,61 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ixcorp.com.pe/biblioteca-soap/autor"
+           targetNamespace="http://ixcorp.com.pe/biblioteca-soap/autor" elementFormDefault="qualified">
+
+    <xs:element name="getAutorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAutorResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="autor" type="tns:autor" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAllAutorRequest">
+        <xs:complexType/>
+    </xs:element>
+
+    <xs:element name="getAllAutorResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="autorType" type="tns:autor" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addAutorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="autorId" type="xs:int"/>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="telefono" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addAutorResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="autorType" type="tns:autor"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="autor">
+        <xs:sequence>
+            <xs:element name="autorId" type="xs:int"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="apellidos" type="xs:string"/>
+            <xs:element name="telefono" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>

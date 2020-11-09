@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:us="http://ixcorp.com.pe/biblioteca-soap/autor">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <us:getAllAutorRequest />
+        <us:addAutorRequest>
+            <us:autorId>0</us:autorId>
+            <us:nombre>Lucia</us:nombre>
+            <us:apellidos>Perez</us:apellidos>
+        </us:addAutorRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
